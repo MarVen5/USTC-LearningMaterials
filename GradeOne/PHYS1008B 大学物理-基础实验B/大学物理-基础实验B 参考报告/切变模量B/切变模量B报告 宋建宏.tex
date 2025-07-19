@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{graphicx}
+\usepackage{hyperref} 
+\usepackage{mathbbol}
+
+\title{切变模量实验报告}
+\author{姓名：宋建宏\,\, 学号：PB21020677\,\, 班级：203院22级5班\\ 日期：2023年6月9日}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{实验目的}
+理解切变模量的物理意义，学习根据不确定度分析设计实验的方法。
+\section*{实验原理}
+对于一根金属丝，其形状类似于一个圆柱体，长度为$L$、半径为$ R$.固定一端，在材料弹
+性限度内，扭转另一端，则圆柱体各截面的体积元均发生切应变，其切应变$\gamma$与切应力$\tau$比
+值为常数：
+\[G=\frac{\tau}{\gamma}\]
+这个式子即为剪切胡克定律，$G$即为材料的切变模量。
+
+在本实验中我们采用扭转金属丝的方式对切变模量进行测量。金属丝扭转时，
+单位长度的转角满足 $\frac{\mathrm{d} \varphi} { \mathrm{d} L}=\frac{\varphi}{L} $, 分析这细圆柱中长为的一小段, 其上截面为 $\mathrm{A}$, 下截面 为 $B$。
+发生切变时, 其下端 b 移动到 $b^{\prime}$, 其转角 $\gamma$ 满足
+$b b^{\prime}=\gamma d l=R d \varphi$，
+即切应变满足
+$\gamma=R \frac{d \varphi}{d l}$，
+这一小段钢丝内部离轴线距离为 $\mathrm{p}$ 的位置, 满足
+$\gamma_\rho=\rho \frac{d \varphi}{d l}$，
+此处的切应力为 $$\tau_\rho \cdot \rho \cdot 2 \pi \rho \cdot d \rho=2 \pi G \rho^3 \frac{d \varphi}{d l} \cdot d \rho$$, 因此对其积分得到恢复力矩:
+$M=\int_0^R 2 \pi G \rho^3 d \rho \cdot \frac{d \varphi}{d l}=\frac{\pi}{2} G R^4 \frac{d \varphi}{d l}=\frac{\pi}{2} G R^4 \frac{\varphi}{l}$
+因此有切变模量 $$G=\frac{2 D L}{\pi R^4}$$
+设盘的转动惯量为 $\mathrm{I}_0$，得 $\frac{d^2 \varphi}{d t^2}+\frac{D}{I_0} \varphi=0$, 因此其
+周期满足 $T_0=2 \pi \sqrt{\frac{I_0}{D}}$。由于扭摆底盘形状不规则, 因此可以通过尝试增加一个形状规则的辅助物体来间接得出 则其转动惯量之和为 $\mathrm{I}_0+\mathrm{I}_1$, 因此可以测出另一组周期 $\mathrm{T}_1$, 其满足 $T_1=2 \pi \sqrt{\frac{I_0+I_1}{D}}$, 因此可以 得到
+$$
+\begin{gathered}
+D=\frac{4 \pi^2}{T_0^2} I_0=4 \pi^2 \frac{I_1}{T_1^2-T_0^2}=\frac{2 \pi^2 m\left(r_{\text {内 }}^2+r_{\text {外 }}^2\right)}{T_1^2-T_0^2} \\
+G=\frac{4 \pi L m\left(r_{\text {內 }}^2+r_{\text {外 }}^2\right)}{R^4\left(T_1^2-T_0^2\right)}
+\end{gathered}
+$$
+从而得到实验结果。
+
+\section*{实验仪器}
+切变模量实验仪器一套（铁架台，固定装置，金属丝，托盘，金属圆环），电子秒表，卷尺，游标卡尺，螺旋测微器。
+
+\section*{数据处理}
+
+\subsection*{金属丝的直径}
+直径平均值\[\bar{D}=\frac{\sum_{i=1}^{10}D_i}{10}=\SI{0.7765}{mm}\]
+A类标准不确定度\[\begin{aligned}
+    u_A=\sqrt{\frac{\sum_{i=1}^{10} (D_i-\bar{D})^2}{10(10-1)}}=0.0012\,\mathrm{mm}
+\end{aligned}\]
+B类标准不确定度
+\[u_B=\frac{\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}}{C}=\frac{\sqrt{0.004^2+0.005^2}}{3}=0.002\,\mathrm{mm}\]
+展伸不确定度
+$$
+        U_{D} =\sqrt{\left(t_Pu_A\right)^2+\left(k_Pu_B\right)^2}=\sqrt{\left(2.26\times{0.0012}\right)^2+\left(1.96\times{0.002}\right)^2}=0.005\,\mathrm{mm}\quad(P=0.95)
+$$
+
+\subsection*{其他数据}
+\subsubsection*{金属丝的长度}
+由于测量时无法对准，估计误差约为$0.1\,\mathrm{cm}$，
+B类标准不确定度
+\[u_B=\frac{\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}}{C}=\frac{\sqrt{0.08^2+0.1^2}}{3}=0.04\,\mathrm{cm}\]
+展伸不确定度 
+$$
+U_{L}=k_p u_B=1.96\times 0.04=0.08\,\mathrm{cm}  \quad(P=0.95)    
+$$
+\subsubsection*{金属环内外径}
+展伸不确定度 
+$$
+U_{d}=k_p \frac{\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}}{C}=1.645\times \frac{\sqrt{0.02^2+0.01^2}}{\sqrt{3}}=0.02\,\mathrm{mm}  \quad(P=0.95)    
+$$
+\subsubsection*{扭摆周期}
+周期的主要误差来源为人的估计误差，测量值的展伸不确定度为
+\[U_t=k_p\frac{\Delta_{估}}{C}=1.96\times\frac{0.2}{3}=\SI{0.130}{s}\]
+则周期测量值的不确定度为
+\[U_{T_0}=\frac{U_t}{30}=\SI{0.004}{s}\]
+\[U_{T_1}=\frac{U_t}{50}=\SI{0.003}{s}\]
+\subsection*{最终计算}
+代入公式计算得
+\[D=\SI{5.570e-3}{N\cdot m}\qquad G=\SI{6.704e10}{Pa}\]
+由不确定度传递公式
+\[
+\begin{aligned}
+    \frac{U_G}{G} & =\sqrt{\left(\frac{U_L}{L}\right)^2+\left(\frac{U_m}{m}\right)^2+\left(\frac{4 U_D}{D}\right)^2+\frac{\left(2 d_{\text {内 }} U_{d}\right)^2+\left(2 d_{\text {外 }} U_{d}\right)^2}{\left(d_{\text {内 }}^2+d_{\text {外 }}^2\right)^2}+\frac{\left(2 T_0 U_{T_0}\right)^2+\left(2 T_1 U_{T_1}\right)^2}{\left(T_0^2-T_1^2\right)^2}} \\
+    \frac{U_D}{D} & =\sqrt{\left(\frac{U_m}{m}\right)^2+\frac{\left(2 d_{\text {内 }} U_{d}\right)^2+\left(2 d_{\text {外 }} U_{d}\right)^2}{\left(d_{\text {内 }}^2+d_{\text {外 }}^2\right)^2}+\frac{\left(2 T_0 U_{T_0}\right)^2+\left(2 T_1 U_{T_1}\right)^2}{\left(T_0^2-T_1^2\right)^2}}
+    \end{aligned}\]
+已知$\frac{U_m}{m}=0.00018$，计算得
+\[\frac{U_G}{G}=0.026 \qquad\frac{U_D}{D}=0.003\]
+因此\[U_G=\SI{0.17e10}{Pa}\qquad U_D=\SI{0.017e-3}{N\cdot m}\]
+故最终测量结果为\begin{align*}
+    \text{切变模量:}& G=(6.70 \pm 0.17) \times 10^{10} \,\mathrm{P a}\quad(P=0.95)\\
+\text{扭转模量:}& D=(5.570 \pm 0.017) \times 10^{-3}\, \mathrm{N} \cdot \mathrm{m}\quad(P=0.95)
+\end{align*}
+
+\section*{思考题}
+\begin{enumerate}
+    \item 本实验是否满足 $\gamma<<1$ 的条件？
+    
+    由于钢丝均匀形变, 有
+$$
+\gamma=R \frac{\varphi}{L}
+$$
+在实际实验中, 转动的角度 $\varphi<\pi$, 带入 $\mathrm{R}$ 和 $\mathrm{L}$ 的数据, 得 $\gamma<3 \times 10^{-3}$ 实际操作中, 转角更小, 可以满足 $\gamma<<1$ 的条件。
+
+    \item 为提高测量精度，本实验在设计上作了哪些安排？在具体测量时又要注意什么？
+    
+    为提高实验精度，首要的就是减小主要误差。本实验通过仪器的最大允差，结合粗测
+数据，从而选择了合适的仪器，并确定了金属丝的半（直）径的误差为实验的主要误差。因
+此，对于其他物理量，测量1次即可；对于金属丝的直径则测量了10组以减小误差。考虑
+到时间测量问题，需要根据要求，测量多个周期的总用时，从而减小这一项的实验误差。合
+成以后，本实验的实验误差就可以降低。
+\end{enumerate}
+
+
+\end{document}

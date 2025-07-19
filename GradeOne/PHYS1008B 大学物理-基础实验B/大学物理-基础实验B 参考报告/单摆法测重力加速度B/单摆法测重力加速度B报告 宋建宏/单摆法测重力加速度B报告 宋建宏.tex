@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage{siunitx}
+\title{单摆测重力加速度实验报告}
+\author{姓名：宋建宏\,\, 学号：PB21020677\,\, 班级：203院22级5班\\ 日期：2023年3月30日}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{实验目的}
+利用单摆测量重力加速度，学习基本的物理实验操作，不确定度分析以及数据处理和误差分析。
+
+\section*{实验原理}
+在摆角较小，忽略空气阻力，摆锤体积，摆线质量等高阶小量修正的情况下，单摆的周期近似为
+\begin{equation*}
+    T=2\pi\sqrt{\frac{l}{g}}
+\end{equation*}
+因此可以通过实验测量单摆的周期与摆长的关系而得到当地的重力加速度
+\begin{equation*}
+    g=4\pi^2\frac{l}{T^2}
+\end{equation*}
+
+\subsection*{不确定度分析}
+其最大不确定度为
+\begin{equation*}
+    \frac{\Delta g}{g}=2\frac{\Delta T}{T}+\frac{\Delta l}{l}
+\end{equation*}
+要求不确定度$\frac{\Delta g}{g}\leq 1 \%$，根据不确定度均分原理有
+$$
+    2\frac{\Delta T}{T}\leq 0.5\%,\quad\frac{\Delta l}{l}\leq 0.5\%
+$$
+因为摆线较长，故使用钢卷尺测量摆长于是有
+\[\Delta_{\text{尺}}<\Delta l\leq0.5\%\times l\]
+可得摆长可取的范围为
+\[l>\SI{40}{cm}.\]
+$l$越大，$\Delta l/l$越小，误差也就越小，所以增加摆长可以提高测量精度。
+我们取摆长约为$\SI{70}{cm}$此时周期约为$\SI{1.68}{s}$，我们有
+\[\Delta T\leq 0.5\times 0.5\%\times \SI{1.68}{s}\approx\SI{4.2e-3}{s}\]
+设测量周期数为$N$，则
+\[N>\frac{\Delta_{\text{人}}}{\SI{4.2e-3}{s}}=47.61\]
+故最少要测48个周期，在实验中我们选择测量50个周期。
+
+
+\section*{实验器材}
+\
+
+单摆、卷尺（$\Delta\approx\SI{0.2}{cm}$）、电子秒表（\(\Delta \approx \SI{0.01}{s}\)）。
+\newpage
+
+\section*{分析与讨论}
+
+\subsection*{数据处理}
+
+\subsubsection*{对摆线长的处理}
+\begin{align*}
+    \overline{l}=\frac{69.80+69.82+69.80+69.81+69.80}{5}\SI{}{cm}= \SI{69.806}{cm}
+\end{align*}
+
+卷尺误差为正态分布
+\[t_{0.95}=2.57\quad \Delta_{\text{尺}}=\SI{0.2}{cm}\quad C=3\quad k_p=1.96\]
+A类不确定度
+\[u_{Al}=\frac{\sigma_l}{\sqrt{n}}=\sqrt{\frac{\sum_{i=1}^{5}(l_i-\bar{l})^2}{5(5-1)}}\approx\SI{0.004}{cm}\]
+由不确定度合成公式
+\[U_{l}=\sqrt{\left(t_{0.95}u_{Al}\right)^2+\left(\frac{k_{0.95}\Delta_{\text{尺}}}{C}\right)}=\sqrt{(2.57\times 0.004)^2+\left(\frac{1.96\times 0.2}{3}\right)^2}\approx\SI{0.13}{cm}\]
+则有
+\[l=(69.81\pm 0.13)\SI{}{cm}\qquad (P=0.95)\]
+
+\subsubsection*{对测量时间的处理}
+秒表误差分布为正态分布，有
+\[t_{0.95}=2.57\quad \Delta_{\text{秒}}=\SI{0.01}{s}\quad C=3\quad k_p=1.96\]
+测量时间均值
+\begin{align*}
+    \overline{T}_{\text{总}}=\frac{83.94+83.93+83.91+83.94+83.92}{5}\SI{}{s}=\SI{83.928}{s}
+\end{align*}
+A类不确定度
+\[u_{AT}=\frac{\sigma_T}{\sqrt{n}}=\sqrt{\frac{\sum_{i=1}^{5}(T_i-\overline{T})^2}{5(5-1)}}\approx\SI{0.00583}{s}\]
+由不确定度合成公式
+\[U_{T}=\sqrt{\left(t_{0.95}u_{AT}\right)^2+\left(\frac{k_{0.95}\Delta_{\text{人}}}{C}\right)}=\sqrt{(2.57\times 0.00583)^2+\left(\frac{1.96\times 0.2}{3}\right)^2}\approx\SI{0.13}{s}\]
+则有
+\[T_{\text{总}}=(83.93\pm 0.13)\SI{}{s}\]
+于是摆动周期为
+\[ T=\frac{T_{\text{总}}}{50}=(1.679\pm 0.003)\SI{}{s}\qquad (P=0.95)\]
+
+\subsubsection*{数据计算}
+由测量数据平均值得到重力加速度
+\begin{equation*}
+    g=4\pi^2\frac{l}{T^2}=\SI{9.780}{m/s^2}
+\end{equation*}
+由不确定度传递公式得
+\[\frac{U_g}{g}=\sqrt{\left(\frac{U_l}{l}\right)^2+\left(2\frac{U_T}{T}\right)^2}=\sqrt{\left(\frac{0.13}{69.81}\right)^2+\left(2\frac{0.003}{1.679}\right)^2}=0.004<1\%\]
+所以
+\[U_g=9.780\times 0.004=0.04\]
+于是最终测量结果为 
+\[g=(9.78\pm 0.04)\SI{}{m/s^2}\qquad (P=0.95)\]
+\subsubsection*{误差分析}
+
+合肥地区重力加速度参考值为$g_0=\SI{9.79}{m/s^2}$，因此实验相对误差为
+\[\delta =\frac{|g-g_0|}{g_0}=0.1\%\]
+测量精度较高。误差来源见思考题。
+
+\section*{思考题}
+分析基本误差的来源，提出进行改进的方法。
+
+测量结果偏小。经分析原因如下：
+
+\begin{enumerate}
+    \item 受空气阻尼影响，摆周期较理想情况略增加。
+    \item 测量时间时，由于测量人反应速度原因，计时存在误差。
+    \item 细线在摆动时可能因向心力而伸长，使得测量摆长较测量摆长较小。
+\end{enumerate}
+
+改进方法：
+\begin{enumerate}
+    \item 可以使用光电门对摆的周期进行测量；
+    \item 选取合适的器材：强度高的细线，表面光滑、体积小的摆球等；
+    \item 增加实验重复次数，选取不同摆长多次实验。
+\end{enumerate}
+
+\end{document}

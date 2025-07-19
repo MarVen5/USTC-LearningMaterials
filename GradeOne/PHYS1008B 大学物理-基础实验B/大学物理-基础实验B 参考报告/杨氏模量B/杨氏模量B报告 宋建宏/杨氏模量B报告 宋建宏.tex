@@ -1,0 +1,226 @@
+\documentclass{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{amsmath}
+\usepackage{ctex}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{graphicx}
+\usepackage{hyperref} 
+\usepackage{mathbbol}
+
+\title{杨氏模量实验报告}
+\author{姓名：宋建宏\,\, 学号：PB21020677\,\, 班级：203院22级5班\\ 日期：2023年5月27日}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{实验目的}
+学习用拉伸法测定钢丝杨氏模量的方法，掌握利用光杠杆测定微小形变的方法。
+
+\section*{实验原理}
+在材料弹性限度内, 应力 $F / S$ (即法向力与材料横截面积之比) 和应变 $\Delta L / L$ (即长度的相 对延长量)之比是一个常数, 即
+$$
+    E=\frac{F / S}{\Delta L / L}=\frac{FL}{S \Delta L}
+$$
+为常数。这个数值叫做杨氏模量。
+
+由于金属丝杨氏模量大, 施加常规大小的应力时, 产生的 $\triangle \mathrm{L}$ 很小, 不易被测量。因此需要对 $\triangle \mathrm{L}$ 采用放大的方法, 比如光杠杆放大法。
+
+当金属丝受到向下拉力 $F$ 作用时, 杠杆支脚将随被测物下降微小距离 $\triangle L$, 平面镜镜面的法线将转过一个 $\theta$ 角, 此时从望远镜中看到的标尺刻度是标尺经过平 面镜反射所成的像, 从尺子发出的入射线和反射线的夹角为 $2 \theta$,  当 $\theta$ 很小时,
+$$
+    \tan 2 \theta \approx 2 \theta=\frac{b}{D}\quad\quad \theta \approx \tan \theta =\frac{\Delta L}{l}
+$$
+式中 $D$ 为镜面到标尺的距离, $\mathrm{b}$ 为在拉力 $F$ 作用下标尺读数的改变。
+由上式可得
+$$
+    \frac{\Delta L}{l}=\frac{b}{2 D}
+$$
+由此得
+$$
+    \Delta L=\frac{b l}{2 D}
+$$
+和
+$$
+    E=\frac{2 D L F}{S l b}
+$$
+式中 $2 D / l$ 叫做光杠杆的放大倍数。测出 $D 、 L 、 l$ 和金属丝直径 $d\left(S=\pi d^2 / 4\right)$ 及一系列的 $F$ 与 $b$ 之后, 即可计算出金属丝的杨氏模量 $E$ 。
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics*[scale=0.7]{figure.png}
+\end{figure*}
+
+\section*{实验仪器}
+杨氏模量实验仪器一套（金属丝，支架，砝码盘，砝码，标尺，望远镜）。
+
+\section*{测量记录}
+原始数据见附纸。
+\begin{table*}[htbp]
+    \centering
+    \caption{金属丝的直径d，螺旋测微器的初始读数 $d_0=\SI{-0.010}{mm}$}
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+        \hline
+        测量序号          & 1     & 2     & 3     & 4     & 5     & 6    \bigstrut  \\
+        \hline
+        读数            & 0.284 & 0.286 & 0.285 & 0.283 & 0.287 & 0.283 \bigstrut \\
+        \hline
+        $d/\SI{}{mm}$ & 0.294 & 0.296 & 0.295 & 0.293 & 0.297 & 0.293 \bigstrut \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\begin{table*}[htbp]
+    \centering
+    \caption{砝码个数与标尺读数 b 的关系}
+    \begin{tabular}{|cc|r|r|r|r|r|r|r|r|}
+        \hline
+        \multicolumn{2}{|c|}{砝码个数}                             & 0                       & 1 & 2 & 3 & 4 & 5 & 6 & 7 \bigstrut             \\
+        \hline
+        \multicolumn{1}{|r|}{\multirow{2}[4]{*}{读数/\SI{}{mm}}} & \multicolumn{1}{l|}{去程} &0.00   &1.53   &3.09   & 4.71  & 6.23  & 7.81  &  9.49           &11.09 \bigstrut \\
+        \cline{2-10}    \multicolumn{1}{|r|}{}                 & \multicolumn{1}{l|}{回程} & 0.09  & 1.61  &  3.14 & 4.78  & 6.43  & 7.97  &       9.56      & 11.09\bigstrut \\
+        \hline
+        \multicolumn{2}{|c|}{b/\SI{}{mm}}                                                   & 0.045 & 1.57 &  3.115 &  4.745 &  6.33 & 7.89 & 9.525 &11.09 \bigstrut               \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\section*{数据处理}
+\subsection*{标尺到平面镜的距离D}
+$$
+    \bar{D}=\frac{155.53+155.48 +155.51 }{3}\,\mathrm{cm}=155.507\,\mathrm{cm}
+$$
+标准差
+$$
+    \begin{aligned}
+        \sigma=\sqrt{\frac{(155.53-155.507)^2+(155.48-155.507)^2+(155.51-155.507)^2}{3-1}}=0.025\,\mathrm{cm}
+    \end{aligned}
+$$
+B类极限不确定度
+$$
+    \Delta=\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}=\sqrt{0.12^2+0.05^2}=0.13\,\mathrm{cm}
+$$
+合成不确定度
+$$
+U_{D}=\sqrt{\left(t_P\frac{\sigma}{\sqrt{3}}\right)^2+\left(k_P\frac{\Delta}{C}\right)^2}=\sqrt{\left(4.3\times \frac{0.025}{\sqrt{3}}\right)^2+\left(1.96\times\frac{0.13}{3}\right)^2}=0.1\,\mathrm{cm}  \quad(P=0.95)    
+$$
+
+\subsection*{光杠杆的臂长l}
+$$
+    \bar{l}=\frac{7.16+7.15+7.14}{3}\,\mathrm{cm}=7.15\,\mathrm{cm}
+$$
+标准差
+$$
+    \begin{aligned}
+        \sigma=\sqrt{\frac{(7.16-7.15)^2+(7.15-7.15)^2+(7.14-7.15)^2}{3-1}}=\SI{0.01}{cm}
+    \end{aligned}
+$$
+B类极限不确定度
+$$
+    \Delta=\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}=\sqrt{0.12^2+0.05^2}\,\mathrm{cm}=0.13\,\mathrm{cm}
+$$
+合成不确定度
+$$
+U_l=\sqrt{\left(t_P\frac{\sigma}{\sqrt{3}}\right)^2+\left(k_P\frac{\Delta}{C}\right)^2}=\sqrt{\left(4.3\times \frac{0.01}{\sqrt{3}}\right)^2+\left(1.96\times\frac{0.13}{3}\right)^2}=0.09\,\mathrm{cm}  \quad(P=0.95) 
+$$
+
+\subsection*{钢丝原长L}
+$$
+    \bar{L}=\frac{105.86+105.83+105.84}{3}\,\mathrm{cm}=105.843\,\mathrm{cm}
+$$
+标准差
+$$
+    \begin{aligned}
+        \sigma=\sqrt{\frac{(105.86-105.843)^2+(105.83-105.843)^2+(105.84-105.843)^2}{3-1}}=\SI{0.015}{cm}
+    \end{aligned}
+$$
+B类极限不确定度（因测量时无法对准，估计误差约为\SI{0.5}{cm}）
+$$
+    \Delta=\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}=\sqrt{0.12^2+0.5^2}\,\mathrm{cm}=0.5\,\mathrm{cm}
+$$
+合成不确定度
+$$
+U_L=\sqrt{\left(t_P\frac{\sigma}{\sqrt{3}}\right)^2+\left(k_P\frac{\Delta}{C}\right)^2}=\sqrt{\left(4.3\times \frac{0.015}{\sqrt{3}}\right)^2+\left(1.96\times\frac{0.5}{3}\right)^2}=0.3\,\mathrm{cm}  \quad(P=0.95) 
+$$
+\subsection*{钢丝直径d}
+$$
+    \overline{d}=\frac{0.294+0.296+0.295+0.293+0.297+0.293}{6}\,\mathrm{mm}=0.2947\,\mathrm{mm}
+$$
+标准差
+$$
+    \begin{aligned}
+        \sigma  & =\sqrt{\frac{(0.294-0.2947)^2+(0.296-0.2947)^2+(0.295-0.2947)^2+(0.293-0.2947)^2+(0.297-0.2947)^2+(0.293-0.2947)^2}{6-1}}\\
+                   & =0.0012\,\mathrm{mm}
+    \end{aligned}
+$$
+B类极限不确定度
+$$
+    \Delta_{B,d}=\sqrt{\Delta_\text{仪}^2+\Delta_\text{估}^2}=\sqrt{0.004^2+0.005^2}\,\mathrm{mm}=0.006\,\mathrm{mm}
+$$
+展伸不确定度
+$$
+        U_{d,P}  =\sqrt{\left(t_P\frac{\sigma}{\sqrt{6}}\right)^2+\left(k_P\frac{\Delta_{B,d}}{C}\right)^2}            =\sqrt{\left(2.57\times\frac{0.0012}{\sqrt{6}}\right)^2+\left(1.96\times\frac{0.006}{3}\right)^2}=0.004\,\mathrm{mm}\quad(P=0.95)
+$$
+
+\subsection*{砝码数与标尺读数b的关系}
+
+最小二乘法拟合如图
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics*[scale=0.6]{graph0.png}
+\end{figure*}
+
+斜率
+$    a=1.58333\,\mathrm{cm}
+$，
+线性拟合的相关系数
+$
+    r=0.99997
+$，
+因此斜率的展伸不确定度为
+$$
+    U_{\mathrm{a}}=t_p\sqrt{\frac{r^{-2}-1}{8-2}} a =2.45\times \sqrt{\frac{0.99997^{-2}-1}{8-2}}\times 1.58333 =0.012 \,\mathrm{cm} (P=0.95)
+$$
+因此 $a=(1.583 \pm 0.012) \mathrm{cm}(P=0.95)$
+
+由上得杨氏模量为
+$$
+    E=\frac{8 D L \mathrm{mg}}{\pi \mathrm{d}^2 l} \cdot \frac{\Delta n}{\Delta b}=\frac{8 D L \mathrm{mg}}{\pi \mathrm{d}^2 l \mathrm{a}}=2.08836 \times 10^{11} \mathrm{~Pa}
+$$
+由于
+$$
+    \frac{\Delta E}{E}=\sqrt{\left(\frac{\Delta L}{L}\right)^2+\left(\frac{\Delta D}{D}\right)^2+\left(2 \frac{\Delta \mathrm{d}}{\mathrm{d}}\right)^2+\left(\frac{\Delta l}{l}\right)^2+\left(\frac{\Delta a}{a}\right)^2}=0.03
+$$
+故
+\[\Delta E= 0.03E=\SI{0.06e11}{Pa}\]
+最终结果为
+$$
+    E=\left(2.09 \pm 0.06\right) \times 10^{11}\,\mathrm{N/m^2}\quad (P=0.95)
+$$
+
+
+
+\section*{思考题}
+
+\begin{enumerate}
+    \item 利用光杠杆把测微小长度$\Delta l$变成测$ b$，光杠杆的放大率为$ 2D/L$，根据
+          此式能否以增加$D$减小$l$来提高放大率，这样做有无好处？有无限度？应怎样考虑这个问题？
+
+          作用不大，应该合理地提高 D，不建议缩小l。本实验中，放大率已经足够，因此b的测量误差并不大。虽然 b 随之增加，但是由于
+          本实验误差本身就比较大，在本实验情况下，b 已经不是主要误差。过分追求放大b对于实
+          验精度贡献小。当 l 较小时，可能引发偏转角$\theta$过大，从而引入新的误差$\tan \theta =\theta$。
+          l 的减小容易使得其相对误差较大，使实验误差大。另外，D 的增大，使标尺的像
+          难以被找到，同时也会减弱像的稳定性，增加实验复杂度。
+          当放大率大时，很有可能使操作过程中标尺读数变化过大，从而超出量程，因此不得
+          不重新实验，或者换用更长的标尺，操作复杂。
+          因此，实验中应保持合适的D与l，从而提升精度、简化步骤。
+
+    \item 实验中，各个长度量用不同的仪器来测量是怎样考虑的，为什么？
+
+          主要从被测物和仪器的特性以及误差均分原理考虑。对于被测物来说，其大致长度
+          决定了仪器需要的量程；实际情况则限制了测量方法，进而限制了仪器的种类。由误差均分
+          原理得到，对于不同的被测物，其需要的绝对误差不同。因此对于仪器的精度要求不同。
+          综合考虑以上几点，可以选择合适的仪器，提升实验精度，提升实验效率。
+\end{enumerate}
+
+\end{document}
