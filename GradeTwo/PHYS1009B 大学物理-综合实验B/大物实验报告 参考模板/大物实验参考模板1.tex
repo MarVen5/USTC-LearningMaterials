@@ -1,0 +1,199 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ntheorem}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{footmisc}
+\usepackage{amssymb}
+\usepackage{makecell}
+\title{定向耦合器及圆柱谐振腔参数测量实验}
+\author{PB20051086 金秋实}
+\usepackage{geometry}
+\geometry{a4paper,scale=0.75}
+\date{\today}
+\begin{document}
+\maketitle
+\section{实验目的}
+（1）了解定向耦合器和圆柱谐振腔的结构和基本原理；
+
+（2）掌握定向耦合器和圆柱谐振腔特性参数的测量方法。 
+\section{实验原理}
+（1）定向耦合器
+
+定向耦合器是一种具有方向性的功率耦合（分配）元件，它是一个四端口 元件。如图4所示，“①→②”是一条传输系统，称为主传输线（主线）；“③→④”为另一条传输系统，称为副传输线（副线），主、副线之间通过耦合机构（例如缝隙、孔、分支线、耦合线段等）把主线功率的一部分（或全部）耦合到副线中去。而且要求功率在副线中只传向某一输出端口，另一端口则无输出。即是说，功率的耦合（分配）是有方向性的，因此称为定向耦合器。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片1.jpg}
+    \caption{定向耦合器的原理图}
+\end{figure}
+
+设图1中端口“①”为输入端,端口“②”为直通输出端,端口“③”为耦合输 出端,端口“④”为隔离端。描述定向耦合器的性能指标有:耦合度、隔离度、方向性。
+
+设定向耦合器的散射矩阵为：
+\begin{equation}
+    [S] = 
+    \begin{bmatrix}
+        S_{11} & S_{12} & S_{13} & S_{14} \\
+        S_{21} & S_{22} & S_{23} & S_{24} \\
+        S_{31} & S_{32} & S_{33} & S_{34} \\
+        S_{41} & S_{42} & S_{43} & S_{44}
+    \end{bmatrix}
+\end{equation}
+
+(a)输入端“①”的输入功率P1与耦合端“③”的输出功率P3之比定义为耦合度，记作C。
+\begin{equation}
+    C = 10lg_{10}\frac{P_1}{P_3}= 20 lg \frac{1}{|S_{31}|}
+\end{equation}
+
+(b)输入端“①”的输入功率 P1和隔离端“④”的输出功率P4之比定义为隔离度，记作I。
+\begin{equation}
+    I = 10 lg\frac{P_1}{P_4} = 20 lg \frac{1}{|S_{41}|}
+\end{equation}
+
+(c)在理想情况下，副线中耦合口输出时，隔离口应无输出，但实际上由于 设计公式的近似或工艺制造上的原因，常有一些输出，难以达到理想隔离。因此把耦合端“③”的输出功率P3与隔离端“④”的输出功率P4之比定义为方向性系，记作D。
+\begin{equation}
+    D = 10 lg \frac{P_3}{P_4} = 20 lg \left|\frac{S_{31}}{S_{41}}\right| = I - C
+\end{equation}
+
+其常用谐振模有$TM_{010}$、$TE_{111}$、$TE_{011}$三种，在$l<2.1a$ 时，圆柱谐振腔的最低模为：$TM_{010}$，在$l>2.1a$时，圆柱谐振腔的最低模为：$TE_{111}$，$TE_{011}$在圆柱谐振腔中不是最低模，但由于该模式只有沿$\phi$方向的臂电流分布，损耗很小，故其品质因数最高，因而多用该模式做精度很高的稳频腔或波长计。描述谐振器的参量有谐振频率$f_0$、品质因数Q。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片2.png}
+    \caption{圆柱谐振腔示意图}
+\end{figure}
+矢量网络分析仪测量圆柱谐振腔的谐振频率和品质系数主要原理是：当谐振时，圆柱谐振腔的功率最大，此时对应的频率为谐振频率；当圆柱谐振腔的功率降低为原来一半时，此时带宽为半功率带宽，也被称为3dB带宽，假设谐振频率为$f_0$，两个半功率频率点分别为：$f_1$和$f_2$ （$f_2>f_1$ ），那么品质系数为：
+\begin{equation}
+    Q = \frac{f_0}{f_2 - f_1}
+\end{equation}
+
+\section{实验内容}
+(1) 测量定向耦合器的耦合度和隔离度；
+
+(2) 测量圆柱谐振腔的谐振频率和品质系数。
+
+\section{实验装置}
+
+该传输线微波参数测试系统主要包含产品如下表所示：
+\begin{table}[!htp]
+    \centering
+    \caption{系统组成表}
+    \begin{tabular}{|c| c |c| c| c|}
+        \hline
+        序号 & 名称 & 型号 & 数量 & 备注 \\
+        \hline
+        1 & 波导高方向性耦合器 & HD-32WC10N & 1 & \\\hline
+        2 & 波导固定衰减器 & HD-32WFA20 & 1 & \\\hline
+        3 & 匹配负载 & HD-32WL1.03 & 3 & \\\hline
+        4 & 波导短路板 & HD-32WS & 1 & \\\hline
+        5 & 波导同轴转换 & HD-32WCAN & 2 & \\\hline
+        6 & 波导升降平台 & HD-SJPT-T1 & 5 & \\\hline
+        7 & 电缆 & HD-18DLB50NJJ1500 & 2 & \\\hline
+        8 & 被测件 定向耦合器& HD-32WC10N& 1&\\\hline
+        & 被测件 圆柱谐振腔& HD-32XZQ3&&\\\hline
+        9& 定位螺钉&&50&\\\hline
+        10& 矢量网络分析仪&FPC1500&1&\\
+        \hline
+        \end{tabular}
+\end{table}
+\section{实验步骤}
+（1）定向耦合器参数测量
+
+设定矢量网络分析仪的频率范围为2.7~3GHz；
+
+(a) 回波损耗测量
+
+反射定标校准：
+
+按照图3进行反射定标，在被测件的连接处，用短路板替换被测件直波导进行连接，进行反射定标，在S21测试模式下，采用S21 Normalize校准，使得回波损耗RL=0dB；
+
+回波损耗测量：
+
+定标完成后，去掉短路板，将被测件定向耦合器一端与波导高方向性耦合器相连，另外几端匹配负载，分别测量2.7GHz，2.75GHz，2.8GHz，2.85GHz，2.9GHz，2.95GHz，3GHz下的回波损耗，每个频率测量三次，取平均值。根据回波损耗，计算反射参数。
+
+按照上述方法分别其他端口的回波损耗。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片3.png}
+    \caption{定向耦合器回波损耗测量示意图}
+\end{figure}
+
+(b) 耦合度和隔离度测量
+
+传输定标：按照图4进行连接，将被测件用同轴转换替代，在S21测试模式下，采用S21 Normalize校准，使得回波损耗RL=0dB，完成传输定标；
+
+耦合度测量：按照图4进行连接，被测件耦合器1端口与高方向性耦合器相连，3端口与矢量网络分析仪相连，分别测量2.7GHz，2.75GHz，2.8GHz，2.85GHz，2.9GHz，2.95GHz，3GHz下的回波损耗，每个频率测量三次，取平均值。所测数值即为被测件耦合器的耦合度。
+
+隔离度测量：按照图4进行连接，被测件耦合器2端口与高方向性耦合器相连，3端口与矢量网络分析仪相连，分别测量2.7GHz，2.75GHz，2.8GHz，2.85GHz，2.9GHz，2.95GHz，3GHz下的回波损耗，每个频率测量三次，取平均值。所测数值即为被测件耦合器的隔离度。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片4.png}
+    \caption{定向耦合器耦合度及隔离度测量示意图}
+\end{figure}
+
+（2）圆柱谐振腔参数测量
+
+设定矢量网络分析仪的频率范围为2.7~3GHz；
+
+(a) 利用反射参数测量谐振频率
+
+反射定标校准：
+
+将所需器件按照图5方式进行连接，在波导高方向性耦合器右端采用短路板进行反射定标，矢量网络分析仪显示回波损耗 RL=0dB；
+
+利用回波损耗测量谐振频率：
+
+将被测件谐振腔一端口与波导高方向性耦合器相连，另外一端接波导匹配负载，分别调节谐振腔的刻度为0mm，10mm，20mm（初始长度，即0刻度对应长度为58.5mm,谐振腔半径为96mm），记录最小回波损耗对应的频率，即为谐振频率。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片6.png}
+    \caption{圆柱谐振腔（图中直波导）反射参量测量示意图}
+\end{figure}
+
+(b) 利用传输参数测量谐振频率及品质系数
+
+传输定标校准：
+
+将所需器件按照图6进行连接，将固定衰减器的右侧端口与高方向耦合器的左侧端口相连接，用传输法进行定标，仪表显示RL=0dB
+
+利用传输参量测量谐振频率：
+
+将被测件谐振腔一端口与波导高方向性耦合器相连，另外一端接波导衰减器，分别调节谐振腔的刻度为0mm，10mm，20mm（初始长度，即0刻度对应长度为58.5mm,谐振腔半径为96mm），记录最小回波损耗对应的频率，即为谐振频率。根据3dB原则，分别测量3dB对应的频宽，并根据此计算品质系数。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics{图片5.png}
+    \caption{圆柱谐振腔（图中直波导）传输参量测量示意图}
+\end{figure}
+
+1.6实验数据处理
+
+（1）根据反射回波损耗，计算被测件定向耦合器三端口的反射参量（模），绘制反射参量随频率的变化曲线；
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[scale = 0.5]{反射参量.png}
+    \caption{反射参量随频率变化曲线}
+\end{figure}
+
+（2）根据被测件定向耦合器的耦合度和隔离度，计算方向性，并绘制耦合度、隔离度、方向性随频率的变化曲线；
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[scale = 0.5]{三度.png}
+    \caption{耦合度、隔离度、方向性随频率变化曲线}
+\end{figure}
+
+（3）根据谐振频率，计算不同长度下的圆柱谐振腔的品质系数。
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[scale = 0.5]{品质因子.png}
+    \caption{不同长度下的品质系数}
+\end{figure}
+
+\section{实验数据}
+实验原始数据如下图：
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[scale = 0.1]{实验数据1.jpg}\qquad
+    \includegraphics[scale = 0.1]{实验数据2.jpg}\qquad
+    \includegraphics[scale = 0.05]{实验数据3.jpg}
+    \caption{实验原始数据}
+\end{figure}
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{subfigure}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand*{\headrulewidth}{0pt}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\begin{document}
+\title{\songti{\textbf{大学物理实验数据处理——医学物理实验}}}
+\author{\songti{\large{}}}
+\maketitle
+\pagenumbering{arabic}
+\paragraph*{实验数据与不确定度分析：}~\\
+\indent 本实验通过把温度转化为电压信号制作体温计。~\\
+\indent 首先需要证明 LM35 集成电压型温度传感器测量的电压能够\textbf{较敏锐地感知温度变化、与温度呈现良好的关系}，为此
+从 $80.0^\circ$C 起，每隔 $10.0^\circ$C 设置控温系统温度，
+待控温稳定后，记录温度传感器的输出，到 $30.0^\circ$C 止，得到测量结果如下：
+\begin{table}[H]
+    \centering
+    \caption{不同设定温度下温度传感器电压示数}
+    \begin{tabular}{ccccccc}
+        \hline
+     控温仪温度示数（$^{\circ}\rm{C}$）& 80.0  & 70.0  & 60.0   & 50.0  & 40.0 &30.0\\
+    \hline
+    温度传感器电压示数（mV） &801 &701 &599 &502 &397 &295\\
+    \hline                  
+    \end{tabular}
+    \end{table}
+对测量结果进行处理得到下图：
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{}
+    \caption{温度传感器的输出特性}
+ \end{figure}
+ 从图中可知，温度传感器的灵敏度（斜率）约为 10.11mV/$^\circ$C，线性拟合的相关系数约为 0.9999，说明
+ 此温度传感器能较好感知温度变化且输出电压与温度可以看成线性关系，符合我们的要求。在此基础上将温度传感器的输出
+ 作为信号进入放大电路进行放大和调整，使组装电路得到约 10mV/$^\circ$C 的输出，并将输出电压（表示为温度形式）与标准温度进行对比校准，即可制成
+ 数字式电子温度计。~\\
+ \indent 先用标准体温计为参考，将组装数字式电子温度计在 37.0$^\circ$C 处校准（图 2）。之后从 35.0开
+ 始每隔 1$^\circ$C 设置控温仪温度，到 42.0$^\circ$C 为止，分别记录组装数字式电子温度计和标准温度表的温度示数，
+ 得到数据如下：
+ \begin{table}[H]
+    \centering
+    \caption{组装数字式电子温度计与标准体温计在不同设定温度下的示数}
+    \begin{tabular}{ccccccccc}
+        \hline
+     控温仪设定温度（$^{\circ}$C）& 35.0  & 36.0  & 37.0   & 38.0  & 39.0 &40.0 &41.0 &42.0\\
+    \hline
+    标准体温计示数（$^{\circ}$C）& 34.9  & 35.9  & 37.0   & 38.0  & 39.0 &40.0 &40.9 &42.0\\
+    组装数字式电子温度计示数（$^{\circ}$C）& 34.9  & 35.9  & 37.0   & 38.0  & 38.9 &39.9 &40.9 &41.9\\
+    \hline                  
+    \end{tabular}
+    \end{table}
+    对测量结果进行处理得到图 3。
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{}
+        \caption{温度校正（图中四个温度示数均为 37.0$^\circ$C）}
+     \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{}
+        \caption{组装数字式电子温度计与标准体温计的示数对比}
+     \end{figure}
+由这些数据可知组装数字式电子温度计示数与标准体温计示数的差值在控温仪设定温度为 39.0$^\circ$C、40.0$^\circ$C 和 42.0$^\circ$C
+时最大，最大差值 $\Delta t_{max}= 0.1^\circ\rm{C}$，从而组装数字式电子温度计的线性度
+为 $\delta =0.1^\circ\rm{C}/(42^\circ\rm{C}-35^\circ\rm{C})\times 100\%=1.43\%$ 较小，这说明制作出的温度计精度较高。~\\
+\indent 用标准体温计和自制电子温度计分别测量实验室内掌心温度，结果均为 36.5$^{\circ}$C，这可能是因为掌心温度
+接近校准温度 37.0$^{\circ}$C，在此温度附近组装数字式电子温度计的示数较接近标准体温计的值。
+\label{unknown}
+\end{document}

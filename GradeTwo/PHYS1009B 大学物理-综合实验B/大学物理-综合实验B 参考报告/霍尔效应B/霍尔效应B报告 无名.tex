@@ -1,0 +1,261 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{subfigure}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand*{\headrulewidth}{0pt}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\begin{document}
+\title{\songti{\textbf{大学物理实验报告——霍尔效应}}}
+\maketitle
+\pagenumbering{arabic}
+\paragraph*{实验背景：}~\\
+\indent 在磁场中的载流导体上出现横向电势差的现象是24岁的研究生霍尔（Edwin H. Hall）在1879年发现的，现在称之为霍尔效应。随着半导体物理学的迅猛发展，霍尔系数和电导率的测量已经成为研究半导体材料的主要方法之一。通过实验测量半导体材料的霍尔系数和电导率可以判断材料的导电类型、载流子浓度、载流子迁移率等主要参数。若能测得霍尔系数和电导率随温度变化的关系，还可以求出半导体材料的杂质电离能和材料的禁带宽度。
+在霍尔效应发现约100年后，德国物理学家克利青（Klaus von Klitzing）等研究半导体在极低温度和强磁场中发现了量子霍尔效应，它不仅可作为一种新型电阻标准，还可以改进一些基本量的精确测定，是当代凝聚态物理学和磁学令人惊异的进展之一，克利青为此发现获得1985年诺贝尔物理学奖。在这种霍尔效应中，在平台上$R_{H}$的值是$\frac{1}{\nu}$$\frac{h}{e^2}$（其中$h$是普朗克常数），$\nu$是1,2,3…等整数，我们称它为整数量子霍尔效应。之后的研究中人们发现$\nu$也可以是1/3,2/3,2/5等分数，称为分数量子霍尔效应。其后美籍华裔物理学家崔琦（D. C. Tsui）和施特默在更强磁场下研究量子霍尔效应时发现了分数量子霍尔效应。它的发现使人们对宏观量子现象的认识更深入一步，他们为此发现获得了1998年诺贝尔物理学奖。
+复旦校友、斯坦福教授张首晟与母校合作开展了“量子自旋霍尔效应”的研究。“量子自旋霍尔效应”最先由张首晟教授预言，之后被实验验证。这一成果是美国《科学》杂志评出的2007年十大科学进展之一。如果这一效应在室温下工作，它可能导致新的低功率的“自旋电子学”计算设备的产生。\\
+\indent 由清华大学薛其坤院士领衔，清华大学、中科院物理所和斯坦福大学研究人员联合组成的团队在量子反常霍尔效应研究中取得重大突破，他们从实验中首次观测到量子反常霍尔效应，这是中国科学家从实验中独立观测到的一个重要的物理现象，也是物理学领域基础研究的一项重要科学发明，获得2018年度国家自然科学奖一等奖。
+\paragraph*{实验目的：}~\\
+（1）了解霍尔效应原理以及有关霍尔器件对材料要求的知识；~\\
+（2）学习用“对称测量法”消除副效应影响；~\\
+（3）根据霍尔电压判断霍尔元件载流子类型；~\\
+（4）计算载流子的浓度和迁移率。
+\paragraph*{实验原理：}~\\
+一、通过霍尔效应测量磁场~\\
+\indent 霍尔效应装置如图1所示。将一个半导体薄片放在垂直于它的磁场中($B$的方向沿$z$轴方向)，
+当沿$y$方向的电极$C$、$D$上施加电流$I$时，薄片内定向移动的载流子（设平均速率为$u$）
+受到洛伦兹力$F_{B}=quB$的作用，
+\begin{equation}
+    \begin{split}
+        F_{B}=quB     
+    \end{split}
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{}
+    \caption{霍尔效应实验装置}
+ \end{figure}~\\
+无论载流子是负电荷还是正电荷，$F_{B}$的方向均沿着$x$方向，在磁力的作用下，载流子发生偏移，
+产生电荷积累，从而在薄片$B$、$B'$两侧产生一个电位差$V_{BB'}$，形成一个电场$E$。
+电场使载流子又受到一个与$F_{B}$方向相反的电场力$F_{E}$，
+\begin{equation}
+    \begin{split}
+        F_{E}=qE=qV_{BB'}/b     
+    \end{split}
+\end{equation}
+其中$b$为薄片宽度，$F_{E}$随着电荷累积而增大，当达到稳定状态时$F_{E}$＝$F_{B}$，即
+\begin{equation}
+    \begin{split}
+        quB=qV_{BB'}/b     
+    \end{split}
+\end{equation}			
+这时在$B$、$B'$两侧建立的电场称为霍尔电场，相应的电压称为霍尔电压，电极$B$、$B'$称为霍尔电极。~\\
+\indent 另一方面，射载流子浓度为$n$，薄片厚度为$d$，则电流强度$I$与$u$的关系为：
+\begin{equation}
+    \begin{split}
+        I=bdnqU     
+    \end{split}
+\end{equation} 	                
+由（3）和（4）可得到
+\begin{equation}
+    \begin{split}
+        V_{BB'}=\frac{1}{nq}\frac{IB}{d}     
+    \end{split}
+\end{equation}
+令$R=\frac{1}{nq}$，则
+\begin{equation}
+    \begin{split}
+        V_{BB'}=R\frac{IB}{d}     
+    \end{split}
+\end{equation} 					
+$R$称为霍尔系数，它体现了材料的霍尔效应大小。根据霍尔效应制作的元件称为霍尔元件。
+在应用中，（6）常以如下形式出现：
+\begin{equation}
+    \begin{split}
+        V_{BB'}=K_{H}IB  
+    \end{split}
+\end{equation} 
+式中$K_{H}=\frac{R}{d}=\frac{1}{nqd}$称为霍尔元件灵敏度，$I$称为控制电流。
+~\\ \indent 由式（7）可见，若$I$、$K_{H}$已知，只要测出霍尔电压$V_{BB'}$，即可算出磁场$B$的大小；并且若知载流子类型($n$型半导体多数载流子为电子，$p$型半导体多数载流子为空穴)，则由$V_{BB'}$的正负可测出磁场方向，反之，若已知磁场方向，则可判断载流子类型。
+~\\ 
+~\\
+二、霍尔效应实验中的副效应~\\
+\indent 在实际应用中，伴随霍尔效应经常存在其他效应。例如实际中载流子迁移速率$u$服从统计分布规律，速度小的载流子受到的洛伦兹力小于霍尔电场作用力，向霍尔电场作用力方向偏转，速度大的载流子受到磁场作用力大于霍尔电场作用力，向洛伦兹力方向偏转。这样使得一侧高速载流子较多，相当于温度较高，而另一侧低速载流子较多，相当于温度较低。这种横向温差就是温差电动势$V_{E}$，这种现象称为爱廷豪森效应。这种效应建立需要一定时间，如果采用直流电测量时会因此而给霍尔电压测量带来误差，如果采用交流电，则由于交流变化快使得爱廷豪森效应来不及建立，可以减小测量误差。
+此外，在使用霍尔元件时还存在不等位电动势引起的误差，这是因为霍尔电极$B$、$B'$不可能绝对对称地焊在霍尔片两侧产生的。由于目前生产工艺水平较高，不等位电动势很小，故一般可以忽略，也可以用一个电位器（图1中$R_{1}$）加以平衡。\textit{本实验中通过电流反向后求霍尔电压的平均值消除此误差。}
+~\\ \indent 我们可以通过改变$I_{S}$和磁场$B$的方向消除大多数副效应。具体说在规定电流和磁场正反方向后，测量四组不同方向的$I_{S}$和$B$组合的$V_{BB'}$，
+然后得到霍尔电压平均值。这样能消除爱廷豪森效应以外的副效应，忽略爱廷豪森效应，则其引入的误差不大，可以忽略不计。
+~\\\indent 电导率测量方法如图2所示。设$B'$、$A'$间距离为$L$，样品横截面积为$S=bd$，流经样品电流为$I_{S}$，在零磁场下，测出$V_{B'A'}$,根据欧姆定律可以求出材料的电导率。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{}
+    \caption{测电导率示意图}
+ \end{figure}
+
+\paragraph*{实验仪器和参数：}恒流源，电磁铁，霍尔样品和样品架，锑化铟片，换向开关和接线柱，数字万用表，小磁针。
+\paragraph*{实验内容与步骤：}
+用六脚霍尔片接好线路，霍尔片的尺寸为：$d=$0.5mm，$b=$4.0mm，$L=$3.0mm~\\
+1.保持$I_{M}$不变，取$I_{M}=\rm{0.45A}$，$I_{S}$取1.00,1.50……,4.50mA，测绘$V_{H}-I_{S}$曲线，计算$R_{H}$。~\\
+2.保持$I_{S}$不变，取$I_{S}=\rm{4.50mA}$，$I_{M}$取0.100,0.150……,0.450A，测绘$V_{H}-I_{M}$曲线，计算$R_{H}$。~\\
+3.在零磁场下，取$I_{S}=\rm{1.00mA}$，测$V_{B'A'}$。~\\
+4.确定样品导电类型，并求$R_{H}$、$n$、$\sigma$、$\mu$ 。~\\
+5.取$I_{S}=$1.00 mA，$I_{M}$在0-0.800A之间，测绘锑化铟片$V_{H}-I_{M}$曲线。（此实验$I_{S}$， $I_{M}$不换向）
+
+\paragraph*{实验数据与不确定度分析：}~\\
+\indent 磁铁线圈参数为2700Gs/A~\\
+\indent 在以下1、2中，
+$V_{H}$均取绝对值。~\\
+1、\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|cccccccc}
+        \hline
+    $I_{S}$（mA）  & & 1.00  & 1.50  & 2.00   & 2.50  & 3.00   & 3.50   & 4.00 & 4.50  \\
+    \hline
+   \multirow{4}{*}{$V_{H}$（mV）}&+B，+I &1.684 &2.427 &3.202 &3.973  &4.750  &5.498  &6.272  &7.047\\
+   \cline{2-10}
+   &+B，-I &1.685 &2.426 &3.199 &3.972  &4.747  &5.489  &6.263  &7.041\\
+   \cline{2-10}
+   &-B，+I &1.252 &1.802 &2.377 &2.948  &3.525  &4.078  &4.652  &5.228\\
+   \cline{2-10}
+   &-B，-I &1.254 &1.804 &2.378 &2.948  &3.524  &4.080  &4.654  &5.229\\
+        \hline                    
+    \end{tabular}
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \subfigure[+B，+I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\subfigure[+B，-I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+                 %这个回车键很重要 \quad也可以
+\subfigure[-B，+I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\subfigure[-B，-I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\centering
+\caption{四组$V_{H}-I_{S}$曲线}
+\end{figure}
+ ~\\
+ 则$$\overline{k}=\frac{1.534+1.531+1.137+1.137}{4}\rm{mV/mA}=1.335\rm{V/A}$$
+ 由于$V_{H}=R_{H}\frac{I_{S}B}{d}=\overline{k}I_{S}$，
+$$R_{H}=\frac{\overline{k}d}{B}=\frac{\overline{k}\times 0.5\times 10^{-3}\rm{m}}{I_{M}\times 2700\times 10^{-4}\rm{T/A}}=5.49\times 10^{-3}\rm{m^3/C}$$
+2、\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|cccccccc}
+        \hline
+    $I_{M}$（mA）  & & 0.100  & 0.150  & 0.200   & 0.250  & 0.300   & 0.350   & 0.400 & 0.450  \\
+    \hline
+   \multirow{4}{*}{$V_{H}$（mV）}&+B，+I &2.288 &2.965 &3.639 &4.313  &4.985  &5.655  &6.336  &7.044\\
+   \cline{2-10}
+   &+B，-I &2.285 &2.964 &3.640 &4.316  &4.985  &5.655  &6.338  &7.045\\
+   \cline{2-10}
+   &-B，+I &0.471 &1.147 &1.821 &2.494  &3.164  &3.829  &4.519  &5.228\\
+   \cline{2-10}
+   &-B，-I &0.473 &1.149 &1.841 &2.514  &3.186  &3.855  &4.526  &5.231\\
+        \hline                    
+    \end{tabular}
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \subfigure[+B，+I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\subfigure[+B，-I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+                 %这个回车键很重要 \quad也可以
+\subfigure[-B，+I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\subfigure[-B，-I]{
+\begin{minipage}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=0.84\linewidth]{}
+\end{minipage}
+}
+\centering
+\caption{四组$V_{H}-I_{M}$曲线}
+\end{figure}
+ ~\\
+ 则$$\overline{k}=\frac{13.540+13.549+13.536+13.549}{4}\rm{mV/mA}=13.544\rm{V/A}$$
+由于$V_{H}=R_{H}\frac{I_{S}B}{d}=R_{H}\frac{I_{S}I_{M}\cdot 2700\rm{Gs/A}}{d}=\overline{k}I_{M}$，
+ $$R_{H}=\frac{\overline{k}d}{I_{S}\cdot 2700\rm{Gs/A}}=\frac{\overline{k}\times 0.5\times 10^{-3}\rm{m}}{I_{S}\times 2700\times 10^{-4}\rm{T/A}}=5.57\times 10^{-3}\rm{m^3/C}$$
+3、测得$V_{B'A'}=67.9mV$。~\\
+4、以图1为例，实验中，当$I$沿$y$轴正方向，$B$沿$z$轴负方向时，$V_{BB'}$大于0，说明此六角霍尔片是$n$型半导体。对1和2中得到的霍尔系数取平均，可得$R_{H}=\frac{5.49+5.57}{2}\times 10^{-3}\rm{m^3/C}=5.53\times 10^{-3}\rm{m^3/C}$
+，故$n=\frac{1}{R_{H}e}=1.129\times 10^{21}/\rm{m^{3}}$。由3的结果，$V_{B'A'}=I_{S}\cdot \rho \frac{L}{bd}=I_{S}\cdot\frac{L}{\sigma bd}$，
+可得$\sigma =\frac{1\times 10^{-3}\times 3\times 10^{-3}}{67.9\times 10^{-3}\times 0.5\times 10^{-3}\times 4\times 10^{-3}}\rm{S/m}=22.09\rm{S/m}$，
+从而得$\mu=\frac{\sigma}{ne}=1221.65\rm{cm^{2}/(V\cdot s)}$。~\\
+5、用万用表测出锑化铟片电阻为335$\Omega$。$V_{H}-I_{M}$数据如下表：
+\begin{table}[H]
+    \centering
+    \resizebox{.95\columnwidth}{!}{
+    \begin{tabular}{cccccccccccccc}
+        \hline
+    $I_{M}$（A）  &0.000 & 0.002  & 0.004  & 0.006   & 0.008  & 0.100   & 0.200&0.300
+       & 0.400 & 0.500 &0.600 &0.700 &0.800  \\
+    \hline
+   $V_{H}$（mV）&2.16 &14.79 &26.98 &39.24 &51.12  &62.86  &119.40  &169.21  &201.96 &220.34 &235.50 &250.23 &265.83\\
+        \hline                    
+    \end{tabular}
+    }
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{}
+\caption{锑化铟片$V_{H}-I_{M}$曲线}
+\end{figure}
+~\\
+
+\paragraph*{分析与讨论：}~\\
+\indent 在六角霍尔片的霍尔效应实验中，误差可能来源于爱延豪森效应；另外，笔者做实验时观察到万用表上的示数是时刻变化的，
+因此记录的数据也会导致误差产生。~\\
+\indent 原本，由于两个电流电极与霍尔片的接触电阻不同，电流在电极处产生不相等的焦耳热，引起两电极间的温差
+电动势，此电动势又产生温差电流（热电流）$Q$，热电流在磁场作用下偏转，从而在$R_{H}$方向引起附加电动势，这就是能斯特效应；除此以外，热电流$Q$中载流子的迁移率不同，在$R_{H}$方向
+引起温差，从而产生该方向上的附加电动势，即里纪-杜勒克效应。本实验通过翻转电流和磁场方向，同时减小了不等位电势效应和这另外两个副效应。
+而事实上无论对实验1还是2，当磁场方向一致，仅改变电流方向时，得到的$V_{H}-I_{M}$数据相差很小，最终得到的斜率几乎一样；另外，1和2得到的霍尔系数相差不大；
+由此判断，本实验的误差的确不大。~\\
+\indent 观察锑化铟片$V_{H}-I_{M}$曲线，可以发现在$0.2\rm{A}<I_{M}<0.4\rm{A}$，即$540\rm{Gs}<B<1080\rm{Gs}$时斜率（对应霍尔系数）出现明显的减小，
+磁场小于或者大于这个区间时，$V_{H}$与$I_{M}$均近似成线性关系。原因之一可能是锑化铟片载流子的迁移率$\mu$较高（7.8$\rm{m^{2}/(V\cdot s)}$），
+当磁场客观上较小的时候就能接近或者达到（对锑化铟片而言的）弱磁场与强磁场条件之间的临界点$\mu B=1$。~\\
+\indent 本实验所代表的霍尔效应现象有重要的实际价值，如用霍尔效应原理制备的各种传感器已广泛应用于工业自动化技术、检测技术和信息处理各个方面。
+在量子霍尔效应中，当霍尔系数位于平台上时，导体内部没有宏观电流通过，电流只在导体的边缘流动，可以极大降低电路的发热，提高电子器件开关频率
+和运行速度。之前由于器件尺寸等因素的限制，无法在内部实现强磁场以引发量子霍尔效应。然而量子反常霍尔效应的发现意味着不需要磁场也可能
+引发这种量子霍尔效应，这可能会大大推进相关产业发展。
+
+\clearpage 
+
+\label{unknown}
+\end{document}
